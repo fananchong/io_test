@@ -6,6 +6,9 @@
 void test1(int);
 void test2(int);
 void test3(int);
+void test4(int);
+void test5(int);
+void test6(int);
 
 int main(int argc, const char * argv[])
 {
@@ -15,7 +18,7 @@ int main(int argc, const char * argv[])
 		return 1;
 	}
 	typedef std::function<void(int)> functype;
-	std::vector<functype> f = { nullptr, test1, test2, test3 };
+	std::vector<functype> f = { nullptr, test1, test2, test3, test4, test5, test6 };
 	int param = 0;
 	if (argc <= 3)
 	{

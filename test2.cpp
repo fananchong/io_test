@@ -5,7 +5,7 @@
 void test2(int _)
 {
 	printf("TEST CASE: 每次调用 fwrite fflush\n");
-	FILE* f = fopen("fcase1.txt", "wb");
+	FILE* f = fopen("test.txt", "wb");
 	if (!f)
 	{
 		printf("can not open file\n");

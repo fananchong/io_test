@@ -5,7 +5,7 @@
 void test3(int buffsize)
 {
 	printf("TEST CASE: 只调用 fwrite ；并设置 setbuf ，大小为 %d \n", buffsize);
-	FILE* f = fopen("fcase1.txt", "wb");
+	FILE* f = fopen("test.txt", "wb");
 	if (!f)
 	{
 		printf("can not open file\n");

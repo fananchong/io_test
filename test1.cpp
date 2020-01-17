@@ -5,7 +5,7 @@
 void test1(int _)
 {
 	printf("TEST CASE: 只调用 fwrite\n");
-	FILE* f = fopen("fcase1.txt", "wb");
+	FILE* f = fopen("test.txt", "wb");
 	if (!f)
 	{
 		printf("can not open file\n");
