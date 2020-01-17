@@ -4,7 +4,7 @@
       "name": "Linux-Debug",
       "generator": "Unix Makefiles",
       "remoteMachineName": "${defaultRemoteMachineName}",
-      "configurationType": "Debug",
+      "configurationType": "Release",
       "remoteCMakeListsRoot": "/var/tmp/src/${workspaceHash}/${name}",
       "cmakeExecutable": "/usr/local/bin/cmake",
       "buildRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
