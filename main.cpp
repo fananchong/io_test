@@ -3,9 +3,9 @@
 #include <vector>
 #include <stdlib.h>
 
-void test1();
-void test2();
-void test3();
+void test1(int);
+void test2(int);
+void test3(int);
 
 int main(int argc, const char * argv[])
 {
@@ -14,8 +14,13 @@ int main(int argc, const char * argv[])
 		printf("参数不足！\n");
 		return 1;
 	}
-	typedef std::function<void()> functype;
+	typedef std::function<void(int)> functype;
 	std::vector<functype> f = { nullptr, test1, test2, test3 };
-	f[std::atoi(argv[1])]();
+	int param = 0;
+	if (argc <= 3)
+	{
+		param = std::atoi(argv[2]);
+	}
+	f[std::atoi(argv[1])](param);
 	return 0;
 }

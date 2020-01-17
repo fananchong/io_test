@@ -2,7 +2,7 @@
 #include <cstdio>
 #include <cstdlib>
 
-void test1()
+void test1(int _)
 {
 	printf("TEST CASE: 只调用 fwrite\n");
 	FILE* f = fopen("fcase1.txt", "wb");

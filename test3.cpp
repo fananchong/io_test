@@ -2,18 +2,17 @@
 #include <cstdio>
 #include <cstdlib>
 
-void test3()
+void test3(int buffsize)
 {
-	printf("TEST CASE: 只调用 fwrite ；并设置 setbuf ，大小为 1024 \n");
-
-	char buff[1024];
+	printf("TEST CASE: 只调用 fwrite ；并设置 setbuf ，大小为 %d \n", buffsize);
 	FILE* f = fopen("fcase1.txt", "wb");
 	if (!f)
 	{
 		printf("can not open file\n");
 		exit(1);
 	}
-	setbuf(f, buff);
+	char* buff = new char[buffsize];
+	setvbuf(f, buff, _IOFBF, buffsize);
 	int iters = 1000000;
 	using std::chrono::high_resolution_clock;
 	auto start = high_resolution_clock::now();
@@ -26,4 +25,5 @@ void test3()
 	auto delta = high_resolution_clock::now() - start;
 	auto delta_d = std::chrono::duration_cast<std::chrono::duration<double>>(delta).count();
 	printf("Elapsed: %0.2f secs %d/sec\n", delta_d, int(iters / delta_d));
+	delete buff;
 }

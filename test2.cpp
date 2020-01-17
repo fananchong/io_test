@@ -2,7 +2,7 @@
 #include <cstdio>
 #include <cstdlib>
 
-void test2()
+void test2(int _)
 {
 	printf("TEST CASE: 每次调用 fwrite fflush\n");
 	FILE* f = fopen("fcase1.txt", "wb");
