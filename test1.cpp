@@ -24,4 +24,5 @@ void test1(int _)
 	auto delta = high_resolution_clock::now() - start;
 	auto delta_d = std::chrono::duration_cast<std::chrono::duration<double>>(delta).count();
 	printf("Elapsed: %0.2f secs %d/sec\n", delta_d, int(iters / delta_d));
+	fclose(f);
 }

@@ -20,7 +20,7 @@ int main(int argc, const char * argv[])
 	typedef std::function<void(int)> functype;
 	std::vector<functype> f = { nullptr, test1, test2, test3, test4, test5, test6 };
 	int param = 0;
-	if (argc <= 3)
+	if (argc >= 3)
 	{
 		param = std::atoi(argv[2]);
 	}
